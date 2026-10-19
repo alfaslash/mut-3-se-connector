@@ -126,6 +126,15 @@ Whether you're a Mitsubishi enthusiast, an independent automotive technician, or
 
 ---
 
+## License and Reinstallation
+The license is linked to your computer identifier (HWID).
+- When reinstalling the application on the same PC, the license will continue to work. If the key is not retained, enter your existing license key again.
+- A clean Windows installation, replacement of the system drive or motherboard, or other major hardware changes may change the HWID. In this case, a new license will be required.
+- A separate license is always required for installation on another computer.
+Please keep your license key in a safe place before reinstalling Windows or replacing hardware.
+
+---
+
 > [!NOTE]
 > Availability of individual diagnostic, programming, and service functions depends on the vehicle model, model year, ECU configuration, adapter capabilities, and MUT-III SE software version.
 >
