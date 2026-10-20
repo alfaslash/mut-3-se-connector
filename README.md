@@ -1,146 +1,117 @@
+# MUT-III Connector — Official Product & Landing Repository
 
-# MUT-III Connector: Full Mitsubishi Dealer-Level Diagnostics with Any J2534 Adapter!
-
-**Unlock the full power of Mitsubishi's official MUT-III SE diagnostic software without spending a fortune on an expensive VCI-Lite interface!**
-
-Looking for a way to use Mitsubishi's official dealer diagnostic software without investing in costly proprietary hardware?
-
-**MUT-III Connector** is a specialized software solution that bridges Mitsubishi's official MUT-III SE software with virtually any J2534-compatible diagnostic adapter.
-
-With MUT-III Connector, you can access **100% of MUT-III SE's dealer-level functionality** using affordable diagnostic hardware you may already own!
+> **Official Website & Commercial Landing Page for MUT-III Connector**  
+> Published via **GitHub Pages** with support for custom domains, bilingual localization (English / Russian), and hosted **Robokassa** checkout.
 
 ---
 
-## 🚀 Why Choose MUT-III Connector?
+## 🚀 About MUT-III Connector
 
-### 💰 Massive Cost Savings
+**MUT-III Connector** is a specialized Windows utility that bridges Mitsubishi's official **MUT-III SE (Special Edition)** dealer diagnostic software with virtually any standard J2534 Pass-Thru diagnostic adapter.
 
-Forget about purchasing an expensive VCI-Lite interface! Turn an affordable J2534 adapter, starting at just **1,500 RUB (approximately $20)**, into a powerful dealer-level diagnostic tool.
-
-### 🔓 Full Functionality — No Artificial Restrictions
-
-MUT-III Connector doesn't limit or disable any diagnostic features. MUT-III SE recognizes your J2534 adapter as an original diagnostic interface, allowing the software to operate as intended.
-
-### 🔌 Universal Adapter Compatibility
-
-Already own a Scanmatik, OpenPort, or another J2534-compatible device? There's no need to purchase additional diagnostic hardware. All you need is MUT-III Connector to bring everything together.
-
-### ⚡ Easy Setup and Reliable Operation
-
-No complicated workarounds, unnecessary hardware modifications, or frustrating configuration procedures. Just install the connector, configure your adapter, and start using Mitsubishi's official diagnostic software.
+- **Dealer-Level Diagnostics:** Access 100% of MUT-III SE functionality using affordable diagnostic hardware (Scanmatik 2 PRO, Dialink J2534, OpenPort 2.0, VNCI, etc.).
+- **ECU Programming & Reprog:** Flash and update vehicle control modules using official Mitsubishi firmware databases.
+- **Variant Coding & Customization:** Configure ETACS settings, enable hidden factory features, calibrate sensors, and perform CVT fluid pressure and calibration resets (including Jatco JF016E).
+- **Automated Registry Profile Setup:** One-click configuration of `PassThruSupport.04.04` and `05.00` keys with automated pre-flight backup and instant restore.
+- **Pajero 4 ABS/ASC Fix:** Built-in proxy shim applying 50ms fast-init timings to reliably communicate with Pajero IV K-Line ABS/ASC modules.
+- **100% Offline & Private:** Zero external telemetry, no background cloud calls, runs entirely offline on your diagnostic workstation.
 
 ---
 
-## 🔧 What Can You Do with MUT-III Connector?
+## 🌐 Website Architecture & Structure (GitHub Pages Ready)
 
-Unlock Mitsubishi's complete dealer-level diagnostic and service capabilities across its vehicle lineup.
+The website is fully static, requires no server backend, and is structured directly for GitHub Pages deployment:
 
-### ✅ Advanced Vehicle Diagnostics
-
-Perform comprehensive dealer-level diagnostics on all major vehicle systems, including the engine, transmission, electronic control modules, and other onboard systems.
-
-### ✅ ECU Programming and Firmware Updates
-
-Flash and update control modules using official Mitsubishi firmware, including ETACS, engine ECUs, automatic transmissions, and CVT control units.
-
-### ✅ Vehicle Customization and Hidden Features
-
-Enable factory-supported convenience features, configure vehicle settings, activate cruise control, and customize electronic systems.
-
-### ✅ Immobilizer and Key Programming
-
-Register new keys, perform immobilizer-related service procedures, and restore vehicle access when keys have been lost.
-
-### ✅ Sensor Calibration and Service Procedures
-
-Perform factory service routines, calibrate sensors, register TPMS sensors, and carry out electronic system adaptations.
-
-### ✅ Factory Configuration and CVT Recovery
-
-Restore original ETACS configurations, recover factory settings, and perform CVT calibration and initialization procedures, including support for the **Jatco JF016E** transmission.
-
----
-
-## 💻 Compatibility and System Requirements
-
-MUT-III Connector has been tested with a wide range of J2534 interfaces and can be configured to work with virtually any J2534-compatible adapter.
-
-### Supported Diagnostic Interfaces
-
-- Scanmatik 2 PRO (genuine and clone versions)
-- Scanmatik 3
-- OpenPort 2.0 (genuine and clone versions)
-- ScanDoc
-- Dialink J2534
-- MongoosePro JLR
-- MongoosePro Toyota
-- VNCI Nano
-- Mini-VCI
-
-### Supported Operating Systems
-
-- Windows 11
-- Windows 10
-- Windows 8.1
-- Windows 8
-
-Both **32-bit (x86) and 64-bit (x64)** Windows environments are supported.
+```text
+mut-3-se-connector/
+├── .github/
+│   └── workflows/
+│       └── deploy-pages.yml    # GitHub Actions workflow for automated Pages deployment
+├── .nojekyll                   # Bypasses Jekyll processing on GitHub Pages
+├── CNAME                       # Custom domain mapping (mut3connector.com)
+├── index.html                  # Main landing page (English default + auto-detect Russian)
+├── terms/
+│   └── index.html              # Terms of Sale / Public Offer (English)
+├── privacy/
+│   └── index.html              # Privacy Policy (English)
+├── refund/
+│   └── index.html              # Refund & Cancellation Policy (English)
+├── payment-success/
+│   └── index.html              # Post-checkout success & HWID instructions (EN/RU)
+├── payment-failed/
+│   └── index.html              # Payment cancellation & retry page (EN/RU)
+├── ru/
+│   ├── terms/
+│   │   └── index.html          # Условия продажи и Публичная оферта (Русский)
+│   ├── privacy/
+│   │   └── index.html          # Политика конфиденциальности (Русский)
+│   └── refund/
+│       └── index.html          # Политика возврата средств (Русский)
+├── assets/
+│   ├── css/
+│   │   └── styles.css          # Windows 11 Fluent 2 Design System
+│   ├── js/
+│   │   ├── config.js           # Central configuration (price, Robokassa URL, seller details)
+│   │   ├── i18n.js             # Bilingual dictionary & browser locale detection
+│   │   └── main.js             # Navigation, tabs, FAQ accordion & localization engine
+│   └── img/
+│       ├── app_icon.png        # 256x256 high-resolution app icon
+│       ├── app-ui-manage.svg   # Vector preview of Management window
+│       ├── app-ui-diag.svg     # Vector preview of Diagnostics center
+│       ├── screenshot-manage.jpg # Real laptop screenshot in workshop
+│       └── screenshot-backup.jpg # Real laptop screenshot of backup creation
+├── favicon.ico                 # Favicon
+├── robots.txt                  # Search engine directives
+├── sitemap.xml                 # XML sitemap with hreflang tags
+├── DEPLOYMENT.md               # Detailed Robokassa & GitHub Pages deployment guide
+└── README.md                   # This file
+```
 
 ---
 
-## 🛠 Build Your Own Mitsubishi Dealer-Level Diagnostic Scanner in Just 3 Steps!
+## 🛠 Local Preview
 
-Getting started is surprisingly simple:
+Run a local HTTP server from the repository root:
 
-### Step 1: Get MUT-III SE
+```powershell
+python -m http.server 8000
+```
 
-Download and install Mitsubishi's official MUT-III SE dealer diagnostic software, which is available through free distribution channels.
-
-### Step 2: Connect Your J2534 Adapter
-
-Use any compatible J2534 diagnostic interface. Entry-level adapters are available starting at approximately **1,500 RUB**, and you can also use hardware you already own.
-
-### Step 3: Install MUT-III Connector
-
-Install MUT-III Connector and configure it to communicate with your J2534 interface.
-
-That's it! **Your existing diagnostic adapter is now ready to work with Mitsubishi's official MUT-III SE software.**
+Then navigate to: `http://localhost:8000/`
 
 ---
 
-## 🔑 How to Obtain a License Key
+## ⚙️ Configuration & Customization
 
-To obtain your license key, please email the unique identifier displayed in MUT-III Connector to:
+Before launching publicly or submitting to Robokassa for moderation, edit `assets/js/config.js`:
 
-**📧 [alfaslash@gmail.com](mailto:alfaslash@gmail.com)**
-
----
-
-## 🚗 Professional Mitsubishi Diagnostics Without the Professional Price Tag!
-
-Why spend hundreds of dollars on proprietary diagnostic hardware when you can unlock the same dealer-level software capabilities with an affordable J2534 adapter?
-
-Whether you're a Mitsubishi enthusiast, an independent automotive technician, or a workshop owner, **MUT-III Connector makes professional Mitsubishi diagnostics more accessible and affordable than ever.**
-
-**One connector. Your J2534 adapter. The full power of Mitsubishi MUT-III SE.**
-
----
-
-## License and Reinstallation
-The license is linked to your computer identifier (HWID).
-- When reinstalling the application on the same PC, the license will continue to work. If the key is not retained, enter your existing license key again.
-- A clean Windows installation, replacement of the system drive or motherboard, or other major hardware changes may change the HWID. In this case, a new license will be required.
-- A separate license is always required for installation on another computer.
-Please keep your license key in a safe place before reinstalling Windows or replacing hardware.
-
----
+1. **Robokassa Payment Link:**
+   Set `robokassaUrl` to your hosted checkout link.
+2. **Pricing:**
+   Set `priceUsd: 15` and `priceEurDisplay: 14`.
+3. **Seller Information:**
+   Update your legal name, INN, city, support email (`alfaslash@gmail.com`), phone number, and Telegram.
+4. **Custom Domain:**
+   Update the `CNAME` file and the `siteUrl` in `config.js`.
 
 > [!NOTE]
-> Availability of individual diagnostic, programming, and service functions depends on the vehicle model, model year, ECU configuration, adapter capabilities, and MUT-III SE software version.
->
-> Certain operations may require additional authorization or security access.
->
-> Always maintain stable vehicle power during ECU programming.
+> For complete step-by-step instructions and the **Robokassa Pre-Moderation Checklist**, see [DEPLOYMENT.md](DEPLOYMENT.md).
 
+---
 
+## 🚀 Publishing on GitHub Pages
 
+1. **Push commits to GitHub:**
+   ```powershell
+   git add .
+   git commit -m "Deploy MUT-3 Connector landing page"
+   git push origin main
+   ```
+2. **Enable GitHub Pages:**
+   - In GitHub repository settings, go to **Settings → Pages**.
+   - Under **Build and deployment → Source**:
+     - **Option A (GitHub Actions):** Select **GitHub Actions** (uses `.github/workflows/deploy-pages.yml`).
+     - **Option B (Deploy from branch):** Select branch `main` and folder `/ (root)`.
+3. **Custom Domain & HTTPS:**
+   - Add your domain under **Custom domain** (matches `CNAME`).
+   - Check **Enforce HTTPS**.

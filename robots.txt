@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /payment-success/
+Disallow: /payment-failed/
+
+Sitemap: https://mut3connector.com/sitemap.xml

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Main Landing Page -->
+  <url>
+    <loc>https://mut3connector.com/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mut3connector.com/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://mut3connector.com/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mut3connector.com/" />
+  </url>
+
+  <!-- Terms of Sale (EN) -->
+  <url>
+    <loc>https://mut3connector.com/terms/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mut3connector.com/terms/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://mut3connector.com/ru/terms/" />
+  </url>
+
+  <!-- Terms of Sale (RU) -->
+  <url>
+    <loc>https://mut3connector.com/ru/terms/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://mut3connector.com/ru/terms/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mut3connector.com/terms/" />
+  </url>
+
+  <!-- Privacy Policy (EN) -->
+  <url>
+    <loc>https://mut3connector.com/privacy/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mut3connector.com/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://mut3connector.com/ru/privacy/" />
+  </url>
+
+  <!-- Privacy Policy (RU) -->
+  <url>
+    <loc>https://mut3connector.com/ru/privacy/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://mut3connector.com/ru/privacy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mut3connector.com/privacy/" />
+  </url>
+
+  <!-- Refund Policy (EN) -->
+  <url>
+    <loc>https://mut3connector.com/refund/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mut3connector.com/refund/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://mut3connector.com/ru/refund/" />
+  </url>
+
+  <!-- Refund Policy (RU) -->
+  <url>
+    <loc>https://mut3connector.com/ru/refund/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://mut3connector.com/ru/refund/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mut3connector.com/refund/" />
+  </url>
+</urlset>

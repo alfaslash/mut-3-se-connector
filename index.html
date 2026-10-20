@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MUT-3 Connector — J2534 Pass-Thru Setup for Mitsubishi MUT-III SE</title>
+  <meta name="description" content="Official landing page for MUT-3 Connector. Effortlessly configure universal J2534 adapters (Scanmatik 2 PRO, Dialink, OpenPort 2.0) for Mitsubishi MUT-III SE. Personal license US$15.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mut3connector.com/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mut3connector.com/">
+  <meta property="og:title" content="MUT-3 Connector — J2534 Setup for Mitsubishi MUT-III SE">
+  <meta property="og:description" content="Configure universal J2534 Pass-Thru adapters with Mitsubishi MUT-III SE diagnostic software in one click. Personal perpetual license US$15.">
+  <meta property="og:image" content="https://mut3connector.com/assets/img/app_icon.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="assets/img/app_icon.png">
+  <meta name="theme-color" content="#F3F3F3">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <!-- ===================================================================
+       Site Header
+       =================================================================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#hero" class="brand-link" aria-label="MUT-3 Connector Home">
+        <div class="brand-icon-tile">
+          <img src="assets/img/app_icon.png" alt="MUT-3 Connector Logo" width="32" height="32">
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">MUT-3 Connector</span>
+          <span class="brand-subtitle">for Mitsubishi MUT-III SE</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="#features" class="nav-link" data-i18n="nav.features">Features</a></li>
+          <li><a href="#screenshots" class="nav-link" data-i18n="nav.screenshots">Screenshots</a></li>
+          <li><a href="#requirements" class="nav-link" data-i18n="nav.requirements">Requirements</a></li>
+          <li><a href="#compatibility" class="nav-link" data-i18n="nav.compatibility">Compatibility</a></li>
+          <li><a href="#delivery" class="nav-link" data-i18n="nav.delivery">Delivery</a></li>
+          <li><a href="#pricing" class="nav-link" data-i18n="nav.pricing">Pricing</a></li>
+          <li><a href="#faq" class="nav-link" data-i18n="nav.faq">FAQ</a></li>
+          <li><a href="#support" class="nav-link" data-i18n="nav.support">Support</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Language Switcher Pill -->
+        <button type="button" class="lang-selector-btn" data-action="toggle-lang" title="Switch Language / Сменить язык" aria-label="Switch Language">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+          </svg>
+          <span class="lang-label">RU</span>
+        </button>
+
+        <!-- Buy CTA -->
+        <a href="#pricing" class="btn btn-primary btn-sm" data-buy-btn data-i18n="nav.buy">Buy License</a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================================================================
+       Hero Section
+       =================================================================== -->
+  <section class="hero-section" id="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge-wrap">
+          <span class="badge badge-accent" data-i18n="hero.badge">v1.7.0 • Windows 11 &amp; 10 Fluent Native</span>
+        </div>
+        <h1 class="hero-title" data-i18n="hero.title">MUT-3 Connector</h1>
+        <p class="hero-subtitle" data-i18n="hero.subtitle">
+          Connect Mitsubishi MUT-III SE with standard J2534 Pass-Thru diagnostic adapters in one click.
+        </p>
+
+        <ul class="hero-highlights">
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+            <span data-i18n="hero.highlight1">Dialink, Scanmatik 2 PRO, OpenPort 2.0 &amp; VNCI support</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+            <span data-i18n="hero.highlight2">Automated registry profile setup &amp; safe one-click backup</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+            <span data-i18n="hero.highlight3">Built-in J2534 diagnostic probe &amp; Pajero 4 K-Line ABS fix</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+            <span data-i18n="hero.highlight4">Integrated ECU Reprog database installer</span>
+          </li>
+        </ul>
+
+        <div class="hero-cta-box">
+          <div class="hero-price-pill">
+            <span data-i18n="hero.priceTag">Personal License — US$15 (approx. €14)</span>
+          </div>
+
+          <div class="hero-cta-buttons">
+            <a href="#pricing" class="btn btn-primary btn-lg" data-buy-btn data-i18n="hero.ctaBuy">Buy License — $15</a>
+            <a href="#features" class="btn btn-secondary btn-lg" data-i18n="hero.ctaDetails">Explore Features</a>
+          </div>
+
+          <p class="hero-subnotice" data-i18n="hero.subnotice">
+            One-time purchase • No subscription • Delivered to your email within 12–24h
+          </p>
+        </div>
+      </div>
+
+      <!-- Hero Visual Preview (Fluent App Window) -->
+      <div class="hero-preview">
+        <div class="app-window-frame">
+          <div class="app-window-titlebar">
+            <div class="app-window-title">
+              <img src="assets/img/app_icon.png" alt="Icon" width="16" height="16">
+              <span>MUT-3 Connector</span>
+            </div>
+            <div class="app-window-controls">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+          <div class="app-window-body">
+            <img src="assets/img/app-ui-manage.svg" alt="MUT-3 Connector Management Screen" width="820" height="620" loading="eager">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       Product Overview & Metrics
+       =================================================================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge badge-accent" data-i18n="about.badge">Product Overview</span>
+        <h2 class="section-title" data-i18n="about.title">Professional J2534 Configuration for MUT-III SE</h2>
+      </div>
+
+      <div class="overview-grid">
+        <div class="overview-text">
+          <p data-i18n="about.p1">
+            MUT-3 Connector is a dedicated utility engineered for automotive technicians, diagnostic specialists, and Mitsubishi enthusiasts. It automates the complex registry configuration required to make Mitsubishi MUT-III Special Edition (MUT-III SE) communicate seamlessly through universal J2534 Pass-Thru hardware interfaces instead of expensive proprietary VCI hardware.
+          </p>
+          <p data-i18n="about.p2">
+            Unlike manual registry editing, which is prone to typos and system instability, MUT-3 Connector provides automated profile switching, automatic backup and restore points, comprehensive pre-flight driver verification, and specialized shims for known vehicle protocol quirks.
+          </p>
+
+          <div class="callout callout-accent">
+            <span class="callout-icon">ⓘ</span>
+            <div>
+              <strong>Single-Time Setup:</strong> Configuration only needs to be performed once per adapter. In daily shop use, you start MUT-III SE directly without having to keep MUT-3 Connector running.
+            </div>
+          </div>
+        </div>
+
+        <div class="overview-stats">
+          <div class="stat-card">
+            <div class="stat-value" data-i18n="about.stat1Val">100%</div>
+            <div class="stat-label" data-i18n="about.stat1Label">Offline &amp; Telemetry-Free</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" data-i18n="about.stat2Val">&lt; 1 min</div>
+            <div class="stat-label" data-i18n="about.stat2Label">Configuration Time</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" data-i18n="about.stat3Val">J2534</div>
+            <div class="stat-label" data-i18n="about.stat3Label">04.04 API Standard</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" data-i18n="about.stat4Val">1 PC</div>
+            <div class="stat-label" data-i18n="about.stat4Label">Perpetual License</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       Key Features Section
+       =================================================================== -->
+  <section class="section section-sunken" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge badge-accent" data-i18n="features.badge">Capabilities</span>
+        <h2 class="section-title" data-i18n="features.title">Key Features &amp; Architecture</h2>
+        <p class="section-subtitle" data-i18n="features.subtitle">
+          Engineered specifically for Mitsubishi vehicle diagnostics and coding.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card">
+          <div class="feature-icon-tile">
+            <svg viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
+          </div>
+          <h3 class="feature-title" data-i18n="features.f1Title">Automated Registry Configuration</h3>
+          <p class="feature-desc" data-i18n="features.f1Desc">
+            Instantly links your installed J2534 device driver to MUT-III SE registry keys (PassThruSupport 04.04 and 05.00) without manual .reg hacking.
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-card">
+          <div class="feature-icon-tile">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14h2v2h-2zm0-10h2v8h-2z"/></svg>
+          </div>
+          <h3 class="feature-title" data-i18n="features.f2Title">Safe Backup &amp; Restore</h3>
+          <p class="feature-desc" data-i18n="features.f2Desc">
+            Automatically creates a clean registry snapshot before applying changes. Restore your original system settings with a single button click.
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-card">
+          <div class="feature-icon-tile">
+            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+          </div>
+          <h3 class="feature-title" data-i18n="features.f3Title">VCI-3 Driver Health Check</h3>
+          <p class="feature-desc" data-i18n="features.f3Desc">
+            Verifies the presence and integrity of the original Bosch RNM-VI / VCI-3 driver required by MUT-III SE, with direct download and install guidance.
+          </p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feature-card">
+          <div class="feature-icon-tile">
+            <svg viewBox="0 0 24 24"><path d="M7 2v11h3v9l7-12h-4l4-8z"/></svg>
+          </div>
+          <h3 class="feature-title" data-i18n="features.f4Title">Active J2534 Diagnostics Probe</h3>
+          <p class="feature-desc" data-i18n="features.f4Desc">
+            An isolated diagnostic test that verifies driver registration, 32-bit DLL loading, and live hardware USB handshake before you launch MUT-III SE.
+          </p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="feature-card">
+          <div class="feature-icon-tile">
+            <svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.85 7h10.29l1.04 3H5.81l1.04-3zM19 17H5v-4.66l.12-.34h13.77l.11.34V17z"/></svg>
+          </div>
+          <h3 class="feature-title" data-i18n="features.f5Title">Pajero 4 ABS/ASC K-Line Fix</h3>
+          <p class="feature-desc" data-i18n="features.f5Desc">
+            Includes an integrated proxy shim applying specialized 50ms fast-init timings to reliably communicate with Pajero IV K-Line ABS/ASC modules.
+          </p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="feature-card">
+          <div class="feature-icon-tile">
+            <svg viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/></svg>
+          </div>
+          <h3 class="feature-title" data-i18n="features.f6Title">ECU Reprog Database Installer</h3>
+          <p class="feature-desc" data-i18n="features.f6Desc">
+            Built-in service to download, verify SHA-256 checksums, and automatically install the official firmware database archive for MUT-III SE reprogramming.
+          </p>
+        </div>
+
+        <!-- Feature 7 -->
+        <div class="feature-card">
+          <div class="feature-icon-tile">
+            <svg viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+          </div>
+          <h3 class="feature-title" data-i18n="features.f7Title">Adapter Protocol Inspector</h3>
+          <p class="feature-desc" data-i18n="features.f7Desc">
+            Inspects declared hardware capabilities: CAN, ISO15765, ISO9141 (K-Line), ISO14230 (KWP2000), J1850 PWM/VPW, and extra protocol channels.
+          </p>
+        </div>
+
+        <!-- Feature 8 -->
+        <div class="feature-card">
+          <div class="feature-icon-tile">
+            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+          </div>
+          <h3 class="feature-title" data-i18n="features.f8Title">Privacy-First Architecture</h3>
+          <p class="feature-desc" data-i18n="features.f8Desc">
+            Runs strictly offline on your diagnostic laptop. No external telemetry, no background cloud calls, and no data collection.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       Screenshots / Real Proof Section
+       =================================================================== -->
+  <section class="section" id="screenshots">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge badge-accent" data-i18n="proof.badge">Real Interface</span>
+        <h2 class="section-title" data-i18n="proof.title">Software Interface &amp; Operation</h2>
+        <p class="section-subtitle" data-i18n="proof.subtitle">
+          Built with modern Windows 11 Fluent 2 design language for clean, distraction-free shop use.
+        </p>
+      </div>
+
+      <!-- Proof Tabs -->
+      <div class="proof-tabs">
+        <button type="button" class="proof-tab-btn active" data-target="slide-manage" data-i18n="proof.tabManage">Adapter Management</button>
+        <button type="button" class="proof-tab-btn" data-target="slide-diag" data-i18n="proof.tabDiag">J2534 Diagnostics</button>
+        <button type="button" class="proof-tab-btn" data-target="slide-log" data-i18n="proof.tabLog">Terminal Log</button>
+        <button type="button" class="proof-tab-btn" data-target="slide-photo" data-i18n="proof.tabPhoto">Live Photo in Shop</button>
+      </div>
+
+      <!-- Proof Content Frame -->
+      <div class="proof-content">
+        <!-- Slide 1: Management Vector Mockup -->
+        <div class="proof-slide active" id="slide-manage">
+          <div class="proof-image-wrapper">
+            <img src="assets/img/app-ui-manage.svg" alt="MUT-3 Connector Adapter Management Interface" width="820" height="620" loading="lazy">
+          </div>
+          <p class="proof-caption" data-i18n="proof.captionManage">
+            Management screen: select adapter, one-click backup, driver verification, and configuration apply button.
+          </p>
+        </div>
+
+        <!-- Slide 2: Diagnostics Vector Mockup -->
+        <div class="proof-slide" id="slide-diag">
+          <div class="proof-image-wrapper">
+            <img src="assets/img/app-ui-diag.svg" alt="MUT-3 Connector J2534 Diagnostics and Compatibility Center" width="820" height="620" loading="lazy">
+          </div>
+          <p class="proof-caption" data-i18n="proof.captionDiag">
+            Compatibility center: dynamic static inspection and active USB probe verifying hardware readiness.
+          </p>
+        </div>
+
+        <!-- Slide 3: Terminal Log Presentation -->
+        <div class="proof-slide" id="slide-log">
+          <div class="terminal-panel" style="padding: 24px; min-height: 380px;">
+            <div class="terminal-header">
+              <span>MUT-3 Connector Technical Operations Console [v1.7.0]</span>
+              <span class="badge badge-success">Diagnostics OK</span>
+            </div>
+            <div class="terminal-line"><span class="term-time">[15:30:10]</span> <span class="term-info">Initializing MUT-3 Connector environment...</span></div>
+            <div class="terminal-line"><span class="term-time">[15:30:11]</span> <span class="term-ok">✓ Administrator privileges confirmed (SeDebugPrivilege granted).</span></div>
+            <div class="terminal-line"><span class="term-time">[15:30:12]</span> <span class="term-ok">✓ Hardware ID (HWID): 7A8B-9C0D-E1F2-3456 (Valid signature confirmed).</span></div>
+            <div class="terminal-line"><span class="term-time">[15:30:14]</span> <span class="term-info">Inspecting J2534 Registry: HKLM\SOFTWARE\WOW6432Node\PassThruSupport.04.04</span></div>
+            <div class="terminal-line"><span class="term-time">[15:30:15]</span> <span class="term-ok">✓ Found: Scanmatik 2 PRO (SM2-USB) at C:\Program Files (x86)\Scanmatik\sm2j2534.dll</span></div>
+            <div class="terminal-line"><span class="term-time">[15:30:15]</span> <span class="term-ok">✓ Found: Dialink J2534 at C:\Program Files (x86)\SMS-Soft\Dialink\dialink.dll</span></div>
+            <div class="terminal-line"><span class="term-time">[15:30:16]</span> <span class="term-ok">✓ Found: OpenPort 2.0 at C:\Program Files (x86)\Tactrix\OpenPort 2.0\drivers\openport 2.0\op20pt32.dll</span></div>
+            <div class="terminal-line"><span class="term-time">[15:30:18]</span> <span class="term-info">Verifying Mitsubishi VCI-3 registry alias and Bosch RNM-VI driver...</span></div>
+            <div class="terminal-line"><span class="term-time">[15:30:19]</span> <span class="term-ok">✓ Bosch RNM-VI driver registration confirmed.</span></div>
+            <div class="terminal-line"><span class="term-time">[15:30:20]</span> <span class="term-ok">✓ Pajero 4 K-Line ABS/ASC Fast Init (50ms) proxy shim active.</span></div>
+            <div class="terminal-line"><span class="term-time">[15:30:22]</span> <span class="term-ok">✓ Registry snapshot exported to %LOCALAPPDATA%\MUT3Connector\backup_0404.reg</span></div>
+            <div class="terminal-line"><span class="term-time">[15:30:24]</span> <span class="term-info">Setup successful. Start MUT-III SE and perform diagnostic testing.</span></div>
+          </div>
+          <p class="proof-caption" data-i18n="proof.captionLog">
+            Built-in operations log with timestamps, error diagnostics, and export to support file.
+          </p>
+        </div>
+
+        <!-- Slide 4: Real Workshop Photo -->
+        <div class="proof-slide" id="slide-photo">
+          <div class="proof-image-wrapper">
+            <img src="assets/img/screenshot-manage.jpg" alt="MUT-3 Connector running on diagnostic laptop in workshop" width="820" height="500" loading="lazy">
+          </div>
+          <p class="proof-caption" data-i18n="proof.captionPhoto">
+            MUT-3 Connector running on a technician's laptop with Scanmatik 2 PRO.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       What You Receive Section
+       =================================================================== -->
+  <section class="section section-sunken">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge badge-accent" data-i18n="receive.badge">Package Contents</span>
+        <h2 class="section-title" data-i18n="receive.title">What You Receive After Payment</h2>
+        <p class="section-subtitle" data-i18n="receive.subtitle">
+          Everything needed to configure and run your diagnostic setup.
+        </p>
+      </div>
+
+      <div class="receive-grid">
+        <div class="receive-item">
+          <div class="receive-num">1</div>
+          <div class="receive-text">
+            <h4 data-i18n="receive.item1Title">Personal Software License</h4>
+            <p data-i18n="receive.item1Desc">A perpetual non-exclusive license to use MUT-3 Connector on your computer without recurring fees or expiration dates.</p>
+          </div>
+        </div>
+
+        <div class="receive-item">
+          <div class="receive-num">2</div>
+          <div class="receive-text">
+            <h4 data-i18n="receive.item2Title">Unique License Activation Key</h4>
+            <p data-i18n="receive.item2Desc">A digital cryptographic signature generated specifically for your computer's Hardware ID (HWID).</p>
+          </div>
+        </div>
+
+        <div class="receive-item">
+          <div class="receive-num">3</div>
+          <div class="receive-text">
+            <h4 data-i18n="receive.item3Title">Full Application Package</h4>
+            <p data-i18n="receive.item3Desc">Direct download links to the current production release (v1.7.0) with support for both 64-bit and 32-bit Windows systems.</p>
+          </div>
+        </div>
+
+        <div class="receive-item">
+          <div class="receive-num">4</div>
+          <div class="receive-text">
+            <h4 data-i18n="receive.item4Title">Step-by-Step Instructions</h4>
+            <p data-i18n="receive.item4Desc">Comprehensive documentation covering driver setup, adapter pairing, backup creation, and troubleshooting recommendations.</p>
+          </div>
+        </div>
+
+        <div class="receive-item">
+          <div class="receive-num">5</div>
+          <div class="receive-text">
+            <h4 data-i18n="receive.item5Title">Direct Email Support</h4>
+            <p data-i18n="receive.item5Desc">Responsive developer email assistance with initial setup, compatibility checks, and diagnostic log analysis.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       System Requirements & Hardware Compatibility
+       =================================================================== -->
+  <section class="section" id="requirements">
+    <div class="container">
+      <div class="req-grid">
+        <!-- Column 1: System Requirements -->
+        <div class="card">
+          <span class="badge badge-accent" data-i18n="requirements.badge" style="margin-bottom: 12px;">Prerequisites</span>
+          <h3 class="section-title" style="font-size: 22px; margin-bottom: 16px;" data-i18n="requirements.title">System Requirements</h3>
+
+          <ul class="req-list">
+            <li class="req-item">
+              <span class="req-item-icon">✓</span>
+              <div class="req-item-content">
+                <h4 data-i18n="requirements.osTitle">Operating System</h4>
+                <p data-i18n="requirements.osDesc">Windows 10 or Windows 11 (64-bit recommended, 32-bit supported). Administrator privileges required for registry operations.</p>
+              </div>
+            </li>
+            <li class="req-item">
+              <span class="req-item-icon">✓</span>
+              <div class="req-item-content">
+                <h4 data-i18n="requirements.softTitle">Diagnostic Software</h4>
+                <p data-i18n="requirements.softDesc">Original Mitsubishi MUT-III SE installed on the target machine. MUT-3 Connector configures this software.</p>
+              </div>
+            </li>
+            <li class="req-item">
+              <span class="req-item-icon">✓</span>
+              <div class="req-item-content">
+                <h4 data-i18n="requirements.driverTitle">VCI-3 Driver</h4>
+                <p data-i18n="requirements.driverDesc">Original Bosch RNM-VI driver (Tools/VCI-3) installed. The application includes a verification tool to check this.</p>
+              </div>
+            </li>
+            <li class="req-item">
+              <span class="req-item-icon">✓</span>
+              <div class="req-item-content">
+                <h4 data-i18n="requirements.adapterDriverTitle">J2534 Manufacturer Driver</h4>
+                <p data-i18n="requirements.adapterDriverDesc">Official drivers for your J2534 adapter installed from the hardware manufacturer's official website.</p>
+              </div>
+            </li>
+            <li class="req-item">
+              <span class="req-item-icon">✓</span>
+              <div class="req-item-content">
+                <h4 data-i18n="requirements.hwTitle">Hardware Interface</h4>
+                <p data-i18n="requirements.hwDesc">A functional, genuine J2534 Pass-Thru diagnostic adapter with USB connection and OBD-II vehicle cable.</p>
+              </div>
+            </li>
+          </ul>
+
+          <div class="callout callout-warn" style="margin-top: 20px;">
+            <span class="callout-icon">⚠</span>
+            <div>
+              <strong data-i18n="requirements.noteTitle">Important Note on Windows Rights:</strong>
+              <span data-i18n="requirements.noteDesc">Because Windows protects the system registry, MUT-3 Connector must be run with administrator permissions ('Run as administrator').</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2: Compatibility -->
+        <div class="card" id="compatibility">
+          <span class="badge badge-accent" data-i18n="compatibility.badge" style="margin-bottom: 12px;">Hardware</span>
+          <h3 class="section-title" style="font-size: 22px; margin-bottom: 8px;" data-i18n="compatibility.title">Adapter Compatibility</h3>
+          <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 16px;" data-i18n="compatibility.subtitle">
+            Tested and verified J2534 Pass-Thru hardware interfaces.
+          </p>
+
+          <strong style="font-size: 13px; color: var(--text-primary);" data-i18n="compatibility.verifiedTitle">Tested &amp; Confirmed Adapters:</strong>
+          <div class="adapter-tags">
+            <span class="adapter-tag">
+              <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+              Scanmatik 2 PRO / SM2
+            </span>
+            <span class="adapter-tag">
+              <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+              SMS-Soft Dialink J2534
+            </span>
+            <span class="adapter-tag">
+              <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+              Tactrix OpenPort 2.0 (Orig)
+            </span>
+            <span class="adapter-tag">
+              <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+              Drew Tech MongoosePro
+            </span>
+            <span class="adapter-tag">
+              <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+              VNCI J2534
+            </span>
+            <span class="adapter-tag">
+              <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+              XHorse MVCI
+            </span>
+          </div>
+
+          <div style="margin-top: 18px; border-top: 1px solid var(--stroke-divider); padding-top: 14px;">
+            <strong style="font-size: 13px; color: var(--warn);" data-i18n="compatibility.warningTitle">Compatibility Limitations &amp; Disclaimers:</strong>
+            <ul style="margin: 8px 0 0 18px; font-size: 12px; line-height: 1.6; color: var(--text-secondary);">
+              <li data-i18n="compatibility.w1">Compatibility with unverified low-cost counterfeit/clone adapters is NOT guaranteed. Clones often suffer from unstable firmware, missing pull-ups, or broken 32-bit DLL wrappers.</li>
+              <li data-i18n="compatibility.w2">MUT-III SE requires 32-bit (x86) J2534 DLL drivers registered under the Windows registry key. If your driver only provides 64-bit libraries, it will not connect to 32-bit MUT-III SE.</li>
+              <li data-i18n="compatibility.w3">Vehicle coverage and supported ECUs depend entirely on the physical protocols implemented by your adapter hardware and the vehicle's electrical architecture.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       Pricing Section
+       =================================================================== -->
+  <section class="section section-sunken" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge badge-accent" data-i18n="pricing.badge">Transparent Pricing</span>
+        <h2 class="section-title" data-i18n="pricing.title">Simple, Honest Pricing</h2>
+        <p class="section-subtitle" data-i18n="pricing.subtitle">
+          One-time purchase for a lifetime personal license. No recurring fees, no surprise charges.
+        </p>
+      </div>
+
+      <div class="pricing-wrapper">
+        <div class="pricing-card">
+          <span class="badge badge-accent pricing-badge-top">Single Purchase</span>
+
+          <div class="pricing-header">
+            <div class="pricing-title-wrap">
+              <h3 data-i18n="pricing.cardTitle">Personal License</h3>
+              <p data-i18n="pricing.type">One-time payment • Lifetime usage on 1 PC</p>
+            </div>
+            <div class="pricing-amount">
+              <div>
+                <span class="price-main" data-i18n="pricing.priceUsd">$15</span>
+                <span class="price-currency" data-i18n="pricing.priceUsdLabel">USD</span>
+              </div>
+              <div class="price-sub" data-i18n="pricing.priceEur">Approx. €14</div>
+            </div>
+          </div>
+
+          <ul class="pricing-features-list">
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+              <span data-i18n="pricing.feat1">Full access to all MUT-3 Connector features</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+              <span data-i18n="pricing.feat2">J2534 adapter configuration &amp; profile switcher</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+              <span data-i18n="pricing.feat3">Automated registry backup &amp; instant restore</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+              <span data-i18n="pricing.feat4">Active J2534 compatibility diagnostic probe</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+              <span data-i18n="pricing.feat5">Pajero 4 ABS/ASC K-Line timing fix shim</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+              <span data-i18n="pricing.feat6">ECU Reprog firmware database installer</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+              <span data-i18n="pricing.feat7">Personal HWID license key delivered via email</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+              <span data-i18n="pricing.feat8">Email support directly from the developer</span>
+            </li>
+          </ul>
+
+          <div class="pricing-action">
+            <a href="#" class="btn btn-primary btn-lg" data-buy-btn data-i18n="pricing.cta">Buy Personal License — $15</a>
+          </div>
+
+          <div class="pricing-disclaimer">
+            <strong data-i18n="pricing.disclaimerTitle">Payment &amp; Currency Notice:</strong><br>
+            <span data-i18n="pricing.disclaimer1">Payments are processed by Robokassa hosted payment gateway.</span><br>
+            <span data-i18n="pricing.disclaimer2">Your issuing bank will convert the payment into your card's currency using its current exchange rate. The final charged amount may slightly differ due to bank conversion rates.</span><br>
+            <span data-i18n="pricing.disclaimer3">EUR price (€14) is an approximate display guide for European customers.</span>
+          </div>
+        </div>
+
+        <!-- Payment Methods Banner -->
+        <div class="payment-methods-card">
+          <h4 data-i18n="pricing.paymentMethodsTitle">Accepted Payment Methods:</h4>
+          <p data-i18n="pricing.paymentMethodsDesc">
+            International bank cards (Visa, Mastercard, MIR) from supported countries and issuing banks. Payment processing is hosted securely on Robokassa checkout servers.
+          </p>
+          <p style="font-size: 11px; color: var(--text-tertiary);" data-i18n="pricing.availabilityNote">
+            Payment availability depends on your issuing bank, country, and international payment routing rules.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       Delivery Section
+       =================================================================== -->
+  <section class="section" id="delivery">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge badge-accent" data-i18n="delivery.badge">Fulfillment</span>
+        <h2 class="section-title" data-i18n="delivery.title">Digital Delivery Policy</h2>
+        <p class="section-subtitle" data-i18n="delivery.subtitle">
+          How you receive your license key after completing checkout.
+        </p>
+      </div>
+
+      <div class="callout callout-accent" style="max-width: 820px; margin: 0 auto 32px;">
+        <span class="callout-icon">ⓘ</span>
+        <div>
+          <strong data-i18n="delivery.digitalNotice">This is a 100% digital software product. No physical package, DVD, or dongle will be mailed.</strong>
+        </div>
+      </div>
+
+      <div class="delivery-steps">
+        <div class="delivery-step-card">
+          <span class="badge badge-accent" style="width: fit-content;">Step 1</span>
+          <h4 data-i18n="delivery.step1Title">1. Complete Checkout</h4>
+          <p data-i18n="delivery.step1Desc">Click 'Buy License' and complete payment on the official Robokassa hosted checkout page.</p>
+        </div>
+
+        <div class="delivery-step-card">
+          <span class="badge badge-accent" style="width: fit-content;">Step 2</span>
+          <h4 data-i18n="delivery.step2Title">2. Download &amp; Copy HWID</h4>
+          <p data-i18n="delivery.step2Desc">Download MUT-3 Connector, launch it on your diagnostic PC, and copy your unique Hardware ID (HWID) shown on the activation screen.</p>
+        </div>
+
+        <div class="delivery-step-card">
+          <span class="badge badge-accent" style="width: fit-content;">Step 3</span>
+          <h4 data-i18n="delivery.step3Title">3. Send HWID by Email</h4>
+          <p data-i18n="delivery.step3Desc">Reply to your order confirmation email or send an email to alfaslash@gmail.com with your order number and HWID.</p>
+        </div>
+
+        <div class="delivery-step-card">
+          <span class="badge badge-accent" style="width: fit-content;">Step 4</span>
+          <h4 data-i18n="delivery.step4Title">4. Receive Your License Key</h4>
+          <p data-i18n="delivery.step4Desc">Your unique activation key will be generated and emailed back to you. Typical delivery time: within 12 hours (maximum 24 hours).</p>
+        </div>
+      </div>
+
+      <div class="card" style="max-width: 820px; margin: 0 auto; text-align: center;">
+        <h4 style="font-size: 16px; margin-bottom: 6px;" data-i18n="delivery.timeTitle">Delivery Timeframe</h4>
+        <p style="font-size: 14px; color: var(--text-secondary);" data-i18n="delivery.timeText">
+          Typical delivery: within 12 hours. Guaranteed maximum delivery: within 24 hours. Licenses are issued manually by the developer after verifying the payment.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       FAQ Section
+       =================================================================== -->
+  <section class="section section-sunken" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge badge-accent" data-i18n="faq.badge">Questions &amp; Answers</span>
+        <h2 class="section-title" data-i18n="faq.title">Frequently Asked Questions</h2>
+        <p class="section-subtitle" data-i18n="faq.subtitle">
+          Everything you need to know about licensing, delivery, and compatibility.
+        </p>
+      </div>
+
+      <div class="faq-list">
+        <!-- Q1 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question" aria-expanded="false">
+            <span data-i18n="faq.q1">What do I receive after payment?</span>
+            <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq.a1">You will receive a personal perpetual license key, download links to the current version of MUT-3 Connector, full installation instructions, and email support. Delivery is digital via email.</p>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question" aria-expanded="false">
+            <span data-i18n="faq.q2">How long does license delivery take?</span>
+            <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq.a2">Licenses are generated and verified manually. Typical turnaround is within 12 hours; maximum delivery time is within 24 hours. If you have not received a reply after 24 hours, check your spam folder or email alfaslash@gmail.com.</p>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question" aria-expanded="false">
+            <span data-i18n="faq.q3">Is this a monthly or annual subscription?</span>
+            <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq.a3">No. It is a one-time single payment of $15 USD. The license is perpetual for the activated computer.</p>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question" aria-expanded="false">
+            <span data-i18n="faq.q4">Can I transfer the license to another computer?</span>
+            <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq.a4">The license is tied to the Hardware ID (HWID) of a single workstation. If your motherboard or computer dies, contact support with proof of original purchase for a free reactivation replacement on your new workstation.</p>
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question" aria-expanded="false">
+            <span data-i18n="faq.q5">Which operating systems are supported?</span>
+            <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq.a5">Windows 10 and Windows 11 (both 64-bit and 32-bit editions). Both the app and MUT-III SE require administrative privileges to write to system registry keys.</p>
+          </div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question" aria-expanded="false">
+            <span data-i18n="faq.q6">Which J2534 adapters work best?</span>
+            <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq.a6">SMS-Soft Dialink and Scanmatik 2 PRO provide the most stable communication with Mitsubishi ECUs. Tactrix OpenPort 2.0 (original) is also supported. Low-cost unbranded clones are not recommended due to firmware issues.</p>
+          </div>
+        </div>
+
+        <!-- Q7 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question" aria-expanded="false">
+            <span data-i18n="faq.q7">What is your refund policy?</span>
+            <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq.a7">If the software fails to activate or operate due to a confirmed technical bug that our support team cannot resolve within 5 business days, we issue a full refund to your original payment method. Please review our Refund Policy for details.</p>
+          </div>
+        </div>
+
+        <!-- Q8 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question" aria-expanded="false">
+            <span data-i18n="faq.q8">What if my activation key does not work?</span>
+            <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq.a8">Double check that the HWID in your email matches the HWID displayed in the activation window without trailing spaces. If an error persists, simply email support and we will generate an updated key immediately.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       Support & Developer Contact Section
+       =================================================================== -->
+  <section class="section" id="support">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge badge-accent" data-i18n="support.badge">Help &amp; Assistance</span>
+        <h2 class="section-title" data-i18n="support.title">Direct Developer Support</h2>
+        <p class="section-subtitle" data-i18n="support.subtitle">
+          Get help directly from the creator of MUT-3 Connector.
+        </p>
+      </div>
+
+      <div class="support-grid">
+        <div class="support-card">
+          <h4 data-i18n="support.emailLabel">Email Support</h4>
+          <p data-i18n="support.emailDesc">Typical reply within 12–24 hours for all technical, licensing, and setup questions.</p>
+          <a href="mailto:alfaslash@gmail.com" data-seller-email>alfaslash@gmail.com</a>
+        </div>
+
+        <div class="support-card">
+          <h4 data-i18n="support.telegramLabel">Telegram Support Channel</h4>
+          <p data-i18n="support.telegramDesc">Community announcements and quick operational assistance.</p>
+          <a href="https://t.me/mut3connector_support" data-seller-telegram>@mut3connector_support</a>
+        </div>
+
+        <div class="support-card">
+          <h4 data-i18n="support.hoursLabel">Operating Hours</h4>
+          <p data-i18n="support.hoursDesc">Monday – Sunday, 09:00 – 21:00 UTC+5 (Yekaterinburg time).</p>
+          <span style="font-size: 12px; color: var(--text-tertiary);">Direct developer response</span>
+        </div>
+      </div>
+
+      <!-- Seller Legal Information Card (Required for Robokassa Moderation) -->
+      <div class="seller-card">
+        <h4 data-i18n="seller.title">Seller &amp; Legal Information</h4>
+        <div class="seller-info-grid">
+          <div class="seller-info-item">
+            <span>Seller / Tax Status:</span>
+            <strong data-seller-status data-i18n="seller.status">Self-employed individual (NPD taxpayer, Russian Federation)</strong>
+          </div>
+          <div class="seller-info-item">
+            <span>Legal Name:</span>
+            <strong data-seller-name>Artem Roshko</strong>
+          </div>
+          <div class="seller-info-item">
+            <span data-i18n="seller.innLabel">Taxpayer ID (INN):</span>
+            <strong data-seller-inn>667000000000</strong>
+          </div>
+          <div class="seller-info-item">
+            <span data-i18n="seller.cityLabel">Location:</span>
+            <strong data-seller-city>Yekaterinburg, Russian Federation</strong>
+          </div>
+          <div class="seller-info-item">
+            <span data-i18n="seller.emailLabel">Official Contact Email:</span>
+            <strong data-seller-email>alfaslash@gmail.com</strong>
+          </div>
+          <div class="seller-info-item">
+            <span data-i18n="seller.phoneLabel">Phone:</span>
+            <strong data-seller-phone>+7 (900) 000-00-00</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       Footer
+       =================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h4>MUT-3 Connector</h4>
+          <p>
+            Universal J2534 adapter configuration utility for Mitsubishi MUT-III SE diagnostic systems.
+          </p>
+          <p style="margin-top: 10px; font-size: 12px; color: var(--text-tertiary);">
+            Personal perpetual license US$15. Hosted checkout by Robokassa.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Product Links</h5>
+          <ul class="footer-links">
+            <li><a href="#features" data-i18n="nav.features">Features</a></li>
+            <li><a href="#screenshots" data-i18n="nav.screenshots">Screenshots</a></li>
+            <li><a href="#requirements" data-i18n="nav.requirements">Requirements</a></li>
+            <li><a href="#compatibility" data-i18n="nav.compatibility">Compatibility</a></li>
+            <li><a href="#pricing" data-i18n="nav.pricing">Pricing</a></li>
+            <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Legal &amp; Policies</h5>
+          <ul class="footer-links">
+            <li><a href="terms/" data-i18n="legal.terms">Terms of Sale (Public Offer)</a></li>
+            <li><a href="privacy/" data-i18n="legal.privacy">Privacy Policy</a></li>
+            <li><a href="refund/" data-i18n="legal.refund">Refund Policy</a></li>
+            <li><a href="ru/terms/">Условия продажи (RU)</a></li>
+            <li><a href="ru/privacy/">Конфиденциальность (RU)</a></li>
+            <li><a href="ru/refund/">Возврат средств (RU)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-disclaimer-note" data-i18n="legal.trademarksNote">
+          Disclaimer: All trademarks, brand names, and logos (including Mitsubishi, MUT-III, Bosch, RNM-VI, Tactrix, Drew Tech, Scanmatik, Dialink) belong to their respective owners and are mentioned strictly for technical compatibility identification purposes.
+        </p>
+        <p class="footer-copyright" data-i18n="legal.copyright">
+          &copy; 2026 MUT-3 Connector. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
