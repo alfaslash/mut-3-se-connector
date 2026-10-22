@@ -16,8 +16,10 @@ export const CONFIG = {
     releaseYear: 2026,
     priceUsd: 15,
     priceEurDisplay: 14,
+    priceRub: 1500,
     currencySymbolUsd: "$",
     currencySymbolEur: "€",
+    currencySymbolRub: "₽",
     licenseTypeEn: "Personal Perpetual License (1 PC / HWID-bound)",
     licenseTypeRu: "Персональная бессрочная лицензия (1 ПК / привязка к HWID)",
     typicalDeliveryHours: 12,
@@ -34,6 +36,7 @@ export const CONFIG = {
      * Can be a reusable payment link or hosted checkout form link.
      */
     robokassaUrl: "https://auth.robokassa.ru/Merchant/Index.aspx?MerchantLogin=MUT3CONNECTOR&OutSum=15&InvId=0&Desc=MUT-3+Connector+License&Culture=en",
+    robokassaUrlRu: "https://auth.robokassa.ru/Merchant/Index.aspx?MerchantLogin=MUT3CONNECTOR&OutSum=1500&InvId=0&Desc=Лицензия+MUT-3+Connector&Culture=ru",
   },
 
   seller: {
@@ -51,13 +54,13 @@ export const CONFIG = {
 
   links: {
     siteUrl: "https://mut3connector.com",
-    termsEn: "/terms/",
-    termsRu: "/ru/terms/",
-    privacyEn: "/privacy/",
-    privacyRu: "/ru/privacy/",
-    refundEn: "/refund/",
-    refundRu: "/ru/refund/",
-    successPage: "/payment-success/",
-    failedPage: "/payment-failed/",
+    termsEn: "terms/",
+    termsRu: "ru/terms/",
+    privacyEn: "privacy/",
+    privacyRu: "ru/privacy/",
+    refundEn: "refund/",
+    refundRu: "ru/refund/",
+    successPage: "payment-success/",
+    failedPage: "payment-failed/",
   }
 };

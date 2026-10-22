@@ -15,8 +15,6 @@ class App {
   init() {
     this.bindDomEvents();
     this.applyLocalization(this.currentLang);
-    this.setupPaymentLinks();
-    this.setupSellerDetails();
     this.setupScrollEffects();
   }
 
@@ -119,12 +117,12 @@ class App {
       }
     });
 
-    // Update Document Title and Meta Description if provided
+    // Update Document Title and Meta Description
     if (lang === "ru") {
       document.title = "MUT-3 Connector — Настройка J2534 адаптеров для Mitsubishi MUT-III SE";
       const metaDesc = document.querySelector('meta[name="description"]');
       if (metaDesc) {
-        metaDesc.setAttribute("content", "Официальный сайт MUT-3 Connector. Автоматическая конфигурация J2534 адаптеров (Сканматик 2 ПРО, Dialink, OpenPort 2.0) для Mitsubishi MUT-III SE. Персональная лицензия $15.");
+        metaDesc.setAttribute("content", "Официальный сайт MUT-3 Connector. Автоматическая конфигурация J2534 адаптеров (Сканматик 2 ПРО, Dialink, OpenPort 2.0) для Mitsubishi MUT-III SE. Персональная лицензия 1 500 ₽.");
       }
     } else {
       document.title = "MUT-3 Connector — J2534 Pass-Thru Setup for Mitsubishi MUT-III SE";
@@ -134,10 +132,28 @@ class App {
       }
     }
 
-    // Update Language Toggle Button label
+    // Switch image assets between English and Russian versions
+    const heroPreviewImg = document.querySelector(".hero-preview img");
+    const proofManageImg = document.querySelector("#slide-manage img");
+    const proofDiagImg = document.querySelector("#slide-diag img");
+
+    if (lang === "ru") {
+      if (heroPreviewImg) heroPreviewImg.src = "assets/img/app-ui-manage-ru.svg";
+      if (proofManageImg) proofManageImg.src = "assets/img/app-ui-manage-ru.svg";
+      if (proofDiagImg) proofDiagImg.src = "assets/img/app-ui-diag-ru.svg";
+    } else {
+      if (heroPreviewImg) heroPreviewImg.src = "assets/img/app-ui-manage.svg";
+      if (proofManageImg) proofManageImg.src = "assets/img/app-ui-manage.svg";
+      if (proofDiagImg) proofDiagImg.src = "assets/img/app-ui-diag.svg";
+    }
+
+    // Update Language Toggle Button label (shows the OTHER language option)
     document.querySelectorAll("[data-action='toggle-lang'] .lang-label").forEach((el) => {
       el.textContent = lang === "en" ? "RU" : "EN";
     });
+
+    this.setupPaymentLinks(lang);
+    this.setupSellerDetails(lang);
   }
 
   getNestedValue(obj, path) {
@@ -145,10 +161,13 @@ class App {
   }
 
   /**
-   * Point all checkout CTA buttons to the centralized Robokassa link
+   * Point all checkout CTA buttons to the appropriate Robokassa link (RUB for Russian, USD for English)
    */
-  setupPaymentLinks() {
-    const paymentUrl = CONFIG.payment.robokassaUrl;
+  setupPaymentLinks(lang) {
+    const paymentUrl = (lang === "ru" && CONFIG.payment.robokassaUrlRu)
+      ? CONFIG.payment.robokassaUrlRu
+      : CONFIG.payment.robokassaUrl;
+
     document.querySelectorAll("[data-buy-btn]").forEach((btn) => {
       btn.setAttribute("href", paymentUrl);
       btn.setAttribute("target", "_blank");
@@ -159,11 +178,16 @@ class App {
   /**
    * Populate seller legal information in footer and seller card
    */
-  setupSellerDetails() {
+  setupSellerDetails(lang) {
     const s = CONFIG.seller;
-    document.querySelectorAll("[data-seller-name]").forEach((el) => el.textContent = s.nameEn);
+    const name = lang === "ru" ? s.nameRu : s.nameEn;
+    const city = lang === "ru" ? s.cityRu : s.cityEn;
+    const status = lang === "ru" ? s.taxStatusRu : s.taxStatusEn;
+
+    document.querySelectorAll("[data-seller-status]").forEach((el) => el.textContent = status);
+    document.querySelectorAll("[data-seller-name]").forEach((el) => el.textContent = name);
     document.querySelectorAll("[data-seller-inn]").forEach((el) => el.textContent = s.inn);
-    document.querySelectorAll("[data-seller-city]").forEach((el) => el.textContent = s.cityEn);
+    document.querySelectorAll("[data-seller-city]").forEach((el) => el.textContent = city);
     document.querySelectorAll("[data-seller-email]").forEach((el) => {
       el.textContent = s.email;
       if (el.tagName === "A") el.setAttribute("href", `mailto:${s.email}`);
