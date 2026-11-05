@@ -46,6 +46,20 @@ class App {
           mobileBtn.setAttribute("aria-expanded", "false");
         });
       });
+
+      // Close mobile menu when clicking outside or pressing Escape
+      document.addEventListener("click", (e) => {
+        if (navMenu.classList.contains("open") && !navMenu.contains(e.target) && !mobileBtn.contains(e.target)) {
+          navMenu.classList.remove("open");
+          mobileBtn.setAttribute("aria-expanded", "false");
+        }
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && navMenu.classList.contains("open")) {
+          navMenu.classList.remove("open");
+          mobileBtn.setAttribute("aria-expanded", "false");
+        }
+      });
     }
 
     // FAQ Accordion

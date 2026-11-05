@@ -267,7 +267,7 @@ export const I18N = {
       requirements: "Требования",
       delivery: "Доставка",
       pricing: "Стоимость",
-      faq: "Вопросы и ответы",
+      faq: "Вопросы",
       support: "Поддержка",
       buy: "Купить лицензию",
       langSwitch: "English",
