@@ -133,16 +133,16 @@ class App {
 
     // Update Document Title and Meta Description
     if (lang === "ru") {
-      document.title = "MUT-3 Connector — Настройка J2534 адаптеров для Mitsubishi MUT-III SE";
+      document.title = "MUT-3 Connector v1.9.0 — Настройка J2534 адаптеров для Mitsubishi MUT-III SE";
       const metaDesc = document.querySelector('meta[name="description"]');
       if (metaDesc) {
-        metaDesc.setAttribute("content", "Официальный сайт MUT-3 Connector. Автоматическая конфигурация J2534 адаптеров (Сканматик 2 ПРО, Dialink, OpenPort 2.0) для Mitsubishi MUT-III SE. Персональная лицензия 1 500 ₽.");
+        metaDesc.setAttribute("content", "Официальный сайт MUT-3 Connector v1.9.0. Автоматическая конфигурация J2534 адаптеров (Сканматик 2 ПРО, Dialink, OpenPort 2.0) для Mitsubishi MUT-III SE. Поддержка Windows 11, 10, 8.1 и 7 SP1. Персональная лицензия 1 500 ₽.");
       }
     } else {
-      document.title = "MUT-3 Connector — J2534 Pass-Thru Setup for Mitsubishi MUT-III SE";
+      document.title = "MUT-3 Connector v1.9.0 — J2534 Pass-Thru Setup for Mitsubishi MUT-III SE";
       const metaDesc = document.querySelector('meta[name="description"]');
       if (metaDesc) {
-        metaDesc.setAttribute("content", "Official landing page for MUT-3 Connector. Effortlessly configure universal J2534 adapters (Scanmatik 2 PRO, Dialink, OpenPort 2.0) for Mitsubishi MUT-III SE. Personal license US$15.");
+        metaDesc.setAttribute("content", "Official landing page for MUT-3 Connector v1.9.0. Effortlessly configure universal J2534 adapters (Scanmatik 2 PRO, Dialink, OpenPort 2.0) for Mitsubishi MUT-III SE. Supports Windows 11, 10, 8.1 & 7 SP1. Personal license US$15.");
       }
     }
 

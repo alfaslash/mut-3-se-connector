@@ -12,7 +12,7 @@ export const CONFIG = {
   product: {
     name: "MUT-3 Connector",
     fullName: "MUT-3 Connector for Mitsubishi MUT-III SE",
-    version: "1.7.0",
+    version: "1.9.0",
     releaseYear: 2026,
     priceUsd: 15,
     priceEurDisplay: 14,
