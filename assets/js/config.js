@@ -3,9 +3,9 @@
  * Centralized settings for pricing, payment link, seller legal info, and support contacts.
  *
  * NOTE FOR SELLER / DEVELOPER:
- * 1. Replace ROBOKASSA_PAYMENT_URL with your production hosted payment link before public launch.
- * 2. Update sellerInn, sellerPhone, and telegram if necessary.
- * 3. NEVER put Robokassa merchant secrets (Password #1 or #2) in this client-side code!
+ * 1. purchaseEmail & emailSubject: target email and subject line for license purchase requests.
+ * 2. inn and telegram support null: if set to null, their respective UI blocks are hidden.
+ * 3. Update seller phone and personal details as needed.
  */
 
 export const CONFIG = {
@@ -32,8 +32,14 @@ export const CONFIG = {
 
   payment: {
     /**
-     * Hosted Robokassa payment URL.
-     * Can be a reusable payment link or hosted checkout form link.
+     * Email configuration for license purchase requests
+     */
+    purchaseEmail: "alfaslash@gmail.com",
+    emailSubjectRu: "Приобретение лицензии  MUT- 3 Connector",
+    emailSubjectEn: "Purchase MUT-3 Connector License",
+
+    /**
+     * Hosted Robokassa payment URL (optional / backup).
      */
     robokassaUrl: "https://auth.robokassa.ru/Merchant/Index.aspx?MerchantLogin=MUT3CONNECTOR&OutSum=15&InvId=0&Desc=MUT-3+Connector+License&Culture=en",
     robokassaUrlRu: "https://auth.robokassa.ru/Merchant/Index.aspx?MerchantLogin=MUT3CONNECTOR&OutSum=1500&InvId=0&Desc=Лицензия+MUT-3+Connector&Culture=ru",
@@ -44,12 +50,12 @@ export const CONFIG = {
     taxStatusRu: "Самозанятый гражданин / плательщик НПД (РФ)",
     nameEn: "Artem Roshko",
     nameRu: "Рошко Артём",
-    inn: "667000000000", // Плейсхолдер ИНН: укажите свой ИНН перед отправкой на модерацию
+    inn: null, // Если null, блок с ИНН не выводится на сайте
     cityEn: "Yekaterinburg, Russian Federation",
     cityRu: "г. Екатеринбург, Российская Федерация",
     email: "alfaslash@gmail.com",
-    phone: "+7 (900) 000-00-00", // Плейсхолдер телефона
-    telegram: "@mut3connector_support",
+    phone: "+7 (702) 348-62-93",
+    telegram: null, // Если null, блок с Telegram не выводится на сайте
   },
 
   links: {

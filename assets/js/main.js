@@ -161,17 +161,20 @@ class App {
   }
 
   /**
-   * Point all checkout CTA buttons to the appropriate Robokassa link (RUB for Russian, USD for English)
+   * Point all checkout CTA buttons to mailto link with localized subject
    */
   setupPaymentLinks(lang) {
-    const paymentUrl = (lang === "ru" && CONFIG.payment.robokassaUrlRu)
-      ? CONFIG.payment.robokassaUrlRu
-      : CONFIG.payment.robokassaUrl;
+    const email = CONFIG.payment?.purchaseEmail || CONFIG.seller?.email || "alfaslash@gmail.com";
+    const subject = (lang === "ru")
+      ? (CONFIG.payment?.emailSubjectRu || "Приобретение лицензии  MUT- 3 Connector")
+      : (CONFIG.payment?.emailSubjectEn || "Purchase MUT-3 Connector License");
+
+    const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
 
     document.querySelectorAll("[data-buy-btn]").forEach((btn) => {
-      btn.setAttribute("href", paymentUrl);
-      btn.setAttribute("target", "_blank");
-      btn.setAttribute("rel", "noopener noreferrer");
+      btn.setAttribute("href", mailtoUrl);
+      btn.removeAttribute("target");
+      btn.removeAttribute("rel");
     });
   }
 
@@ -179,26 +182,66 @@ class App {
    * Populate seller legal information in footer and seller card
    */
   setupSellerDetails(lang) {
-    const s = CONFIG.seller;
+    const s = CONFIG.seller || {};
     const name = lang === "ru" ? s.nameRu : s.nameEn;
     const city = lang === "ru" ? s.cityRu : s.cityEn;
     const status = lang === "ru" ? s.taxStatusRu : s.taxStatusEn;
 
-    document.querySelectorAll("[data-seller-status]").forEach((el) => el.textContent = status);
-    document.querySelectorAll("[data-seller-name]").forEach((el) => el.textContent = name);
-    document.querySelectorAll("[data-seller-inn]").forEach((el) => el.textContent = s.inn);
-    document.querySelectorAll("[data-seller-city]").forEach((el) => el.textContent = city);
-    document.querySelectorAll("[data-seller-email]").forEach((el) => {
-      el.textContent = s.email;
-      if (el.tagName === "A") el.setAttribute("href", `mailto:${s.email}`);
+    document.querySelectorAll("[data-seller-status]").forEach((el) => el.textContent = status || "");
+    document.querySelectorAll("[data-seller-name]").forEach((el) => el.textContent = name || "");
+    document.querySelectorAll("[data-seller-city]").forEach((el) => el.textContent = city || "");
+
+    // INN block check: if null / undefined / empty, do not display the block
+    const isInnEmpty = s.inn === null || s.inn === undefined || s.inn === "";
+    document.querySelectorAll("[data-seller-inn-block]").forEach((block) => {
+      block.style.display = isInnEmpty ? "none" : "";
     });
-    document.querySelectorAll("[data-seller-phone]").forEach((el) => {
-      el.textContent = s.phone;
-      if (el.tagName === "A") el.setAttribute("href", `tel:${s.phone.replace(/[^+\d]/g, "")}`);
+    document.querySelectorAll("[data-seller-inn]").forEach((el) => {
+      const parentBlock = el.closest(".seller-info-item");
+      if (parentBlock && !parentBlock.hasAttribute("data-seller-inn-block")) {
+        parentBlock.style.display = isInnEmpty ? "none" : "";
+      }
+      if (!isInnEmpty) {
+        el.textContent = s.inn;
+      }
+    });
+
+    // Telegram block check: if null / undefined / empty, do not display the block
+    const isTelegramEmpty = s.telegram === null || s.telegram === undefined || s.telegram === "";
+    document.querySelectorAll("[data-seller-telegram-block]").forEach((block) => {
+      block.style.display = isTelegramEmpty ? "none" : "";
     });
     document.querySelectorAll("[data-seller-telegram]").forEach((el) => {
-      el.textContent = s.telegram;
-      if (el.tagName === "A") el.setAttribute("href", `https://t.me/${s.telegram.replace("@", "")}`);
+      const parentBlock = el.closest(".support-card");
+      if (parentBlock && !parentBlock.hasAttribute("data-seller-telegram-block")) {
+        parentBlock.style.display = isTelegramEmpty ? "none" : "";
+      }
+      if (!isTelegramEmpty) {
+        el.textContent = s.telegram;
+        if (el.tagName === "A") el.setAttribute("href", `https://t.me/${s.telegram.replace("@", "")}`);
+      }
+    });
+
+    // Email
+    document.querySelectorAll("[data-seller-email]").forEach((el) => {
+      el.textContent = s.email || "";
+      if (el.tagName === "A") el.setAttribute("href", `mailto:${s.email || ""}`);
+    });
+
+    // Phone
+    const isPhoneEmpty = s.phone === null || s.phone === undefined || s.phone === "";
+    document.querySelectorAll("[data-seller-phone-block]").forEach((block) => {
+      block.style.display = isPhoneEmpty ? "none" : "";
+    });
+    document.querySelectorAll("[data-seller-phone]").forEach((el) => {
+      const parentBlock = el.closest(".seller-info-item");
+      if (parentBlock && !parentBlock.hasAttribute("data-seller-phone-block")) {
+        parentBlock.style.display = isPhoneEmpty ? "none" : "";
+      }
+      if (!isPhoneEmpty) {
+        el.textContent = s.phone;
+        if (el.tagName === "A") el.setAttribute("href", `tel:${s.phone.replace(/[^+\d]/g, "")}`);
+      }
     });
   }
 
